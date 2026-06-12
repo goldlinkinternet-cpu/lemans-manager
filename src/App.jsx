@@ -159,9 +159,6 @@ export default function App() {
           const data = snap.data().state
           isRemote.current = true
           setAppState(data)
-          if (activeTab === 'overview' || !data.teams?.find(t => t.id === activeTab)) {
-            setActiveTab(data.teams?.[0]?.id || 'overview')
-          }
         } else {
           // First time: save defaults
           const def = DEFAULT_STATE
