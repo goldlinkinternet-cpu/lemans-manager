@@ -90,7 +90,7 @@ const C = {
 
 const S = {
   app:       { background:C.bg, minHeight:'100vh', color:C.text, fontFamily:"'Rajdhani','Segoe UI',sans-serif" },
-  header:    { padding:'20px 24px 16px', borderBottom:`2px solid ${C.gdim}`, background:'radial-gradient(ellipse 100% 200% at 50% -40%,#0a240a,transparent 65%)', display:'flex', flexDirection:'column', alignItems:'center', gap:4 },
+  header:    { padding:'0 0 16px', borderBottom:`2px solid ${C.gdim}`, background:'radial-gradient(ellipse 120% 300% at 50% -20%,#0d2e0d 0%,#030503 70%)', display:'flex', flexDirection:'column', alignItems:'center', gap:4 },
   logoRow:   { display:'flex', alignItems:'center', gap:12 },
   bolt:      { fontSize:'1.7rem', color:C.green, filter:`drop-shadow(0 0 12px ${C.green})` },
   title:     { fontFamily:'monospace', fontWeight:900, fontSize:'1.6rem', letterSpacing:5, color:C.green, textShadow:`0 0 20px ${C.green}90` },
