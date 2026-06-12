@@ -257,7 +257,7 @@ export default function App() {
     <div style={S.app}>
       {/* HEADER */}
       <header style={S.header}>
-        <img src="/logo.jpg" alt="Stormline Team" style={{ height: 140, objectFit: "contain", filter: "brightness(2) drop-shadow(0 0 24px #39FF14)" }} />
+        <img src="/logo.jpg" alt="Stormline Team" style={{ height: 160, objectFit: "contain", mixBlendMode: "screen", filter: "brightness(1.4) saturate(1.3) drop-shadow(0 0 30px #39FF14cc)" }} />
         <div style={S.sub}>24h Le Mans · iRacing · Gerenciador de Escalação · Sync em Tempo Real</div>
       </header>
 
