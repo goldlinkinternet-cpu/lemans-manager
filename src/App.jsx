@@ -73,9 +73,17 @@ function computeStints(team, race) {
     if (ov.driverId) {
       driver = team.drivers.find(d => d.id === ov.driverId) || null
     } else {
-      const cands = team.drivers.filter(d => (d.availability||[]).includes(s))
-      if (cands.length===1) driver = cands[0]
-      else if (cands.length>1) driver = { id:'CONFLICT', name:'⚠ CONFLITO', color:'#ff4040' }
+      const allCands = (team.drivers||[]).filter(d => (d.availability||[]).includes(s))
+      const mainCands = allCands.filter(d => !d.reserve)
+      const resCands  = allCands.filter(d => d.reserve)
+      if (mainCands.length === 1) {
+        driver = mainCands[0]
+      } else if (mainCands.length > 1) {
+        driver = { id:'CONFLICT', name:'⚠ CONFLITO', color:'#ff4040' }
+      } else if (mainCands.length === 0 && resCands.length > 0) {
+        // Reserva cobre o stint — aparece como piloto 2 (standby)
+        driver = { ...resCands[0], name: resCands[0].name + ' ★', color: '#BB86FC' }
+      }
     }
     return { s, startClock, endClock, raceStart:raceLabel(sm), raceEnd:raceLabel(sm+dur), phase, pit, laps, dur, notes, driver, isLast:s===total-1 }
   })
