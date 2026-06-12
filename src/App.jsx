@@ -90,11 +90,11 @@ const C = {
 
 const S = {
   app:       { background:C.bg, minHeight:'100vh', color:C.text, fontFamily:"'Rajdhani','Segoe UI',sans-serif" },
-  header:    { padding:'0 0 16px', borderBottom:`2px solid ${C.gdim}`, background:'radial-gradient(ellipse 120% 300% at 50% -20%,#0d2e0d 0%,#030503 70%)', display:'flex', flexDirection:'column', alignItems:'center', gap:4 },
+  header:    { padding:'10px 24px 14px', borderBottom:`2px solid ${C.gdim}`, background:'radial-gradient(ellipse 120% 300% at 50% -20%,#0d2e0d 0%,#030503 70%)', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'flex-start', gap:16 },
   logoRow:   { display:'flex', alignItems:'center', gap:12 },
   bolt:      { fontSize:'1.7rem', color:C.green, filter:`drop-shadow(0 0 12px ${C.green})` },
   title:     { fontFamily:'monospace', fontWeight:900, fontSize:'1.6rem', letterSpacing:5, color:C.green, textShadow:`0 0 20px ${C.green}90` },
-  sub:       { fontFamily:'monospace', fontSize:'0.58rem', letterSpacing:5, color:C.muted, textTransform:'uppercase', marginTop:3 },
+  sub:       { fontFamily:'monospace', fontSize:'0.58rem', letterSpacing:5, color:C.muted, textTransform:'uppercase', marginTop:0 },
   racebar:   { background:C.panel, borderBottom:`1px solid ${C.border}`, padding:'10px 20px', display:'flex', flexWrap:'wrap', gap:'8px 16px', alignItems:'flex-end' },
   rfLabel:   { fontSize:'0.5rem', letterSpacing:2, color:C.muted, textTransform:'uppercase', display:'block', marginBottom:2 },
   rfInput:   { background:'#0a130a', border:`1px solid ${C.border}`, borderRadius:3, color:C.white, fontFamily:'monospace', fontSize:'0.8rem', padding:'4px 7px', outline:'none', width:82 },
@@ -257,7 +257,7 @@ export default function App() {
     <div style={S.app}>
       {/* HEADER */}
       <header style={S.header}>
-        <img src="/logo.jpg" alt="Stormline Team" style={{ width: "100%", maxWidth: 600, objectFit: "contain", mixBlendMode: "screen", filter: "brightness(1.5) saturate(1.4) drop-shadow(0 0 40px #39FF14)" }} />
+        <img src="/logo.jpg" alt="Stormline Team" style={{ height: 90, objectFit: "contain", mixBlendMode: "screen", filter: "brightness(1.5) saturate(1.4) drop-shadow(0 0 30px #39FF14)" }} />
         <div style={S.sub}>24h Le Mans · iRacing · Gerenciador de Escalação · Sync em Tempo Real</div>
       </header>
 
